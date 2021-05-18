@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SplashScreen">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@color/design_default_color_primary_variant"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:id="@+id/text_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:text="DC Talk"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+
+        />
+    <ProgressBar
+        android:id="@+id/progress_bar_logo"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/text_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="by Ronald, Chatrin and Bun"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>
