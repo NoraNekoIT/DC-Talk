@@ -7,40 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".ui.FloatingButton">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Augmented Reality"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@color/design_default_color_secondary"
-            />
+    <Button
+        android:id="@+id/btn_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
 
-    </RelativeLayout>
+        android:layout_marginTop="30dp"
+        android:text="Ar Bot"
+        />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+    <Button
         android:id="@+id/fab_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:fabSize="normal"
-        android:elevation="6dp"
-        android:src="@drawable/ic_baseline_message_24"
+        android:layout_gravity="top|center"
+
+        android:layout_marginTop="70dp"
+
+
+        android:text="Chat Bot"
         />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_btn_voice"
+
+    <Button
+        android:id="@+id/btn_petunjuk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:layout_margin="16dp"
-        app:fabSize="normal"
-        android:elevation="6dp"
-        android:src="@drawable/ic_baseline_settings_voice_24"
+        android:layout_gravity="top|center"
+
+        android:layout_marginTop="110dp"
+
+
+        android:text="Petunjuk"
+        />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="16dp"-->
+<!--        app:fabSize="normal"-->
+<!--        android:elevation="6dp"-->
+<!--        android:src="@drawable/ic_baseline_message_24"-->
+<!--        />-->
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_btn_voice"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|left"-->
+<!--        android:layout_margin="16dp"-->
+<!--        app:fabSize="normal"-->
+<!--        android:elevation="6dp"-->
+<!--        android:src="@drawable/ic_baseline_settings_voice_24"-->
+<!--        />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#42A5F5"
+        android:id="@+id/dark_divider"
         />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

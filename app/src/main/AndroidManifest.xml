@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.noranekoit.chatbot">
+    <!-- Both "AR Optional" and "AR Required" apps require CAMERA permission. -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Sceneform requires OpenGL ES 3.0 or later. -->
+    <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+    <!--
+ Indicates that app requires ARCore ("AR Required"). Ensures the app is
+         visible only in the Google Play Store on devices that support ARCore.
+         For "AR Optional" apps remove this line.
+    -->
+    <uses-feature android:name="android.hardware.camera.ar" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -8,29 +22,66 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ChatBot">
-        <activity android:name=".ui.SplashScreen"
+        android:theme="@style/Theme.ChatBot"
+
+        >
+        <activity android:name=".ui.AboutUs"
+            android:parentActivityName=".ui.Home"
+            android:screenOrientation= "portrait"
+            ></activity>
+        <activity
+            android:name=".ui.Home"
             android:theme="@style/Theme.ChatBot.NoActionBar"
+            android:screenOrientation= "portrait"
+            />
+        <activity
+            android:name=".ui.Petunjuk"
+            android:parentActivityName=".ui.Home"
+            android:screenOrientation= "portrait"
+            />
+        <activity android:name=".ui.AR"
+            android:screenOrientation= "portrait"
+            >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+
+        <activity
+            android:name=".ui.SplashScreen"
+            android:theme="@style/Theme.ChatBot.NoActionBar"
+            android:screenOrientation= "portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <activity android:name=".ui.SpeechText"
-            android:parentActivityName=".ui.FloatingButton"></activity>
-
-        <activity android:name=".ui.FloatingButton">
-
-        </activity>
+        <activity android:name=".ui.FloatingButton"
+            android:screenOrientation= "portrait"
+            />
 
         <activity
-            android:name=".ui.MainActivity"
-            android:parentActivityName=".ui.FloatingButton" />
-
+            android:name=".ui.ChatBot"
+            android:parentActivityName=".ui.Home"
+            android:screenOrientation= "portrait"
+            />
+        <!--
+ Indicates that app requires ARCore ("AR Required"). Causes the Google
+         Play Store to download and install Google Play Services for AR along
+         with the app. For an "AR Optional" app, specify "optional" instead of
+         "required".
+        -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
 
 </manifest>

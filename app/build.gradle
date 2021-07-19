@@ -2,6 +2,9 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+
+    // ar
+    id 'com.google.ar.sceneform.plugin'
 }
 
 android {
@@ -9,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.noranekoit.chatbot"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -58,7 +61,32 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
-//Floating Button
-    implementation "com.google.android.material:material:1.2.0-alpha01"
+   //Floating Button
+   implementation "com.google.android.material:material:1.2.0-alpha01"
+
+    // Provides ARCore Session and related resources.
+    implementation 'com.google.ar:core:1.15.0'
+
+    // Provides ArFragment, and other UX resources.
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+
+    // Alternatively, use ArSceneView without the UX dependency.
+    implementation 'com.google.ar.sceneform:core:1.13.0'
+
+    implementation 'com.google.ar.sceneform:animation:1.15.0'
+
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+    
+    //circleImage
+   implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+
 
 }
+
+sceneform.asset('sample/chracter.fbx',
+        'default',
+        'sample/chracter.sfa',
+        'src/main/assets/chracter')

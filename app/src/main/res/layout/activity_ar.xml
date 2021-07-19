@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AR">
+    <fragment
+        android:id="@+id/sceneform_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+
+            android:layout_marginTop="20dp"
+            android:text="Text ditampilkan"
+            android:textColor="@color/white"
+            android:background="#008EF5"
+            android:padding="5dp"
+            />
+
+        <TextView
+        android:id="@+id/tv_voice_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+
+        android:layout_marginBottom="70dp"
+        android:text="Text ditampilkan"
+        android:textColor="@color/white"
+        android:background="#00D9F5"
+        android:padding="5dp"
+
+        />
+
+<!--    <Button-->
+<!--        android:id="@+id/animate_kick_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|center"-->
+
+<!--        android:layout_marginBottom="80dp"-->
+
+<!--        android:text="KICK"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/animate_boxing_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="BOXING"-->
+<!--        />-->
+<!--    <Button-->
+<!--        android:id="@+id/animate_idle_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_marginBottom="80dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="IDLE"-->
+<!--        />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_voice_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:text="AR Bot"
+        android:layout_margin="16dp"
+        app:fabSize="normal"
+        android:elevation="6dp"
+        android:src="@drawable/ic_baseline_settings_voice_24"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

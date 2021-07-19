@@ -5,13 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    android:background="@drawable/bgchat"
+    tools:context=".ui.ChatBot">
     <LinearLayout
         android:id="@+id/ll_layout_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#E4E4E4"
+        android:background="#42A5F5"
         android:orientation="horizontal"
         >
 
@@ -23,23 +24,33 @@
             android:layout_margin="10dp"
             android:layout_weight=".5"
             android:background="@drawable/round_button"
-
+            android:textColor="@color/black"
             android:hint="Type a Message..."
             android:padding="10dp"
             android:singleLine="true"
             />
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_settings_voice_24"
 
+            />
         <Button
             android:id="@+id/btn_send"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="15dp"
             android:layout_weight="1"
-            android:background="@drawable/round_button"
-            android:backgroundTint="#26A69A"
-            android:text="Send"
-            android:textColor="@android:color/white"
+
+            android:background="@drawable/ic_baseline_send_24"
+
             />
+
+
+
     </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_messages"
